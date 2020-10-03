@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - turntrigger
+  - delete
   layers:
   - Default
   - TransparentFX
