@@ -16,7 +16,12 @@ public class Projectile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector2.right * speed * Time.deltaTime);
+        transform.Translate(Vector2.right * speed * Time.deltaTime);//speed of bullet
     }
+
+    void DestroyProjectile(){
+        Object.Destroy(gameObject);
+    }
+    
 
 }
