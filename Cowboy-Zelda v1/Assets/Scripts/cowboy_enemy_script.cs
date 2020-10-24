@@ -10,6 +10,15 @@ public class cowboy_enemy_script : MonoBehaviour
 
     public bool MoveRight;
 
+    private float timebtwnShots;
+    public float startTimebtwnShots;
+    public GameObject bullet;
+
+    void Start()
+    {
+        timebtwnShots = startTimebtwnShots;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -24,10 +33,20 @@ public class cowboy_enemy_script : MonoBehaviour
             transform.Translate(-2 * Time.deltaTime * speed, 0, 0);
             // transform.localScale = new Vector2(-2, 2);            see above
         }
+
+        if (timebtwnShots <= 0)
+        {
+            Instantiate(bullet, transform.position, Quaternion.identity);
+            timebtwnShots = startTimebtwnShots;
+        }
+        else
+        {
+            timebtwnShots -= Time.deltaTime;
+        }
     }
     void OnTriggerEnter2D(Collider2D trig)   // This requires hidden turntriggers (look in my sample scene to see how they should be placed, allows patrol of an area
     {
-        if(trig.gameObject.CompareTag("turntrigger"))   // if the trigger it hits has tag turntrigger, carries out following process
+        if (trig.gameObject.CompareTag("turntrigger"))   // if the trigger it hits has tag turntrigger, carries out following process
         {
             if (MoveRight)                              // has the sprite start moving the other way
             {
