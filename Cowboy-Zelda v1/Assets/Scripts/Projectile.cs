@@ -17,6 +17,26 @@ public class Projectile : MonoBehaviour
     void Update()
     {
         transform.Translate(Vector2.right * speed * Time.deltaTime);//speed of bullet
+
+        foreach(GameObject enemy in GameObject.FindGameObjectsWithTag("Enemy"))
+        {//projectile collision
+            float selfx = transform.position.x;
+            float selfy = transform.position.y;
+            float enemyx = enemy.transform.position.x;
+            float enemyy = enemy.transform.position.y;
+            BoxCollider2D enemyBox = enemy.GetComponent(typeof(BoxCollider2D)) as BoxCollider2D;
+            float enemyw = enemyBox.size.x;
+            float enemyh = enemyBox.size.y;
+
+            if(selfx>enemyx &&
+                selfx<enemyx+enemyw &&
+                selfy>enemyy &&
+                selfy<enemyy+enemyh
+                )
+            {
+                Object.Destroy(enemy);
+            }
+        }
     }
 
     void DestroyProjectile(){
