@@ -5,6 +5,7 @@ using UnityEngine;
 public class ShootingMech : MonoBehaviour
 {
     public float offset;
+    public float bulletCount;
 
     public GameObject bulletPrefab;
     public Transform shotPoint;

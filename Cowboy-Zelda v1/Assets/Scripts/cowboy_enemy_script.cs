@@ -7,8 +7,14 @@ using UnityEngine;
 public class cowboy_enemy_script : MonoBehaviour
 {
     public float speed;
+    public float movementTimer;
 
     public bool MoveRight;
+
+    void Start()
+    {
+        Invoke("ChangeDirection", movementTimer);
+    }
 
     // Update is called once per frame
     void Update()
