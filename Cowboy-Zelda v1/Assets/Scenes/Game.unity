@@ -317,15 +317,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 161797138}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3cfb9850148f93f4aa3cd6f525e3b561, type: 3}
+  m_Script: {fileID: 11500000, guid: 3436e1ebcd4c5ec4f85d5a01450a645a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 0.5
   lineOfSite: 5
-  shootingRange: 3
-  fireRate: 1
-  bullet: {fileID: 842472779}
-  bulletParent: {fileID: 1028105035}
 --- !u!61 &161797143
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1084,12 +1080,6 @@ PrefabInstance:
 --- !u!4 &842472778 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8266533995044423974, guid: e75791ed0fab51a4fa9913831e8dfee7,
-    type: 3}
-  m_PrefabInstance: {fileID: 842472777}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &842472779 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3746630671424706941, guid: e75791ed0fab51a4fa9913831e8dfee7,
     type: 3}
   m_PrefabInstance: {fileID: 842472777}
   m_PrefabAsset: {fileID: 0}

@@ -26,7 +26,7 @@ public class ShootingMech : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0.0f);//moves character
+        Vector3 movement = new Vector3(Input.GetAxis("Horizontal")*2, Input.GetAxis("Vertical")*2, 0.0f);//moves character
 
         //animation of sprites
         animator.SetFloat("Horizontal", movement.x);

@@ -7,18 +7,36 @@ public class Projectile : MonoBehaviour
     public float speed;
     public float lifeTime;
 
+    public Vector2 velocity = new Vector2(0.0f, 0.0f);
+
     // Start is called before the first frame update
     void Start()
     {
-        Invoke("DestroyProjectile", lifeTime);
+        //Invoke("DestroyProjectile", lifeTime);
     }
 
     // Update is called once per frame
     void Update()
     {
+        //new code
+            Vector2 currentPosition = new Vector2(transform.position.x, transform.position.y);
+        Vector2 newPosition = currentPosition + velocity * Time.deltaTime;
+
+        Debug.DrawLine(currentPosition, newPosition, Color.red);
+
+        RaycastHit2D[] hits = Physics2D.LinecastAll(currentPosition, newPosition);
+
+        foreach(RaycastHit2D hit in hits)
+        {
+            Debug.Log(hit.collider.gameObject);
+        }
+
+        transform.position = newPosition;
+        //end of new code
+
         transform.Translate(Vector2.right * speed * Time.deltaTime);//speed of bullet
 
-        foreach(GameObject enemy in GameObject.FindGameObjectsWithTag("Enemy"))
+        /*foreach(GameObject enemy in GameObject.FindGameObjectsWithTag("Enemy"))
         {//projectile collision
             float selfx = transform.position.x;
             float selfy = transform.position.y;
@@ -39,12 +57,12 @@ public class Projectile : MonoBehaviour
                 Object.Destroy(enemy);
                 DestroyProjectile();
             }
-        }
+        }*/
     }
 
-    void DestroyProjectile(){
-        Object.Destroy(gameObject);
-    }
+    //void DestroyProjectile(){
+        //Object.Destroy(gameObject);
+    //}
     
 
 }
