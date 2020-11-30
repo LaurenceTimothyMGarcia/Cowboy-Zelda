@@ -8,6 +8,7 @@ public class Projectile : MonoBehaviour
     public float lifeTime;
 
     public Vector2 velocity = new Vector2(0.0f, 0.0f);
+    public GameObject cowboy;
 
     // Start is called before the first frame update
     void Start()
@@ -28,7 +29,11 @@ public class Projectile : MonoBehaviour
 
         foreach(RaycastHit2D hit in hits)
         {
-            Debug.Log(hit.collider.gameObject);
+            GameObject other = hit.collider.gameObject;
+            if(other != cowboy)
+            {
+                Debug.Log(hit.collider.gameObject);
+            }
         }
 
         transform.position = newPosition;

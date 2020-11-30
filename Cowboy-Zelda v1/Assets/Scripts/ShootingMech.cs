@@ -47,7 +47,9 @@ public class ShootingMech : MonoBehaviour
         }
 
         if (Input.GetMouseButtonDown(0)){//button press to shoot
-            Instantiate(bulletPrefab, shotPoint.position, Quaternion.FromToRotation(new Vector3(1, 0, 0), movement));
+            GameObject projectile = Instantiate(bulletPrefab, shotPoint.position, Quaternion.FromToRotation(new Vector3(1, 0, 0), movement));
+            Projectile projectileScript = projectile.GetComponent<Projectile>();
+            projectileScript.cowboy = gameObject;
             currentAmmo--;
         }
 
