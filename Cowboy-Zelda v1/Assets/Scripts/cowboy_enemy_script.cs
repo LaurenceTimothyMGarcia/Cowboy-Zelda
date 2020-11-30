@@ -10,32 +10,26 @@ public class cowboy_enemy_script : MonoBehaviour
     public float movementTimer;
 
     public bool MoveRight;
+    public bool MoveUp;
 
     public Animator animator;
-
-    private Transform target;
 
     void Start()
     {
         Invoke("ChangeDirection", movementTimer);
-        target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Vector3 movement = new Vector3(x, y, 0.0f);
+        //Vector3 movement = new Vector3(gameObject.transform.x, gameObject.transform.y, 0.0f);
 
-        animator.SetFloat("Horizontal", movement.x);
-        animator.SetFloat("Vertical", movement.y);
-        animator.SetFloat("Magnitude", movement.magnitude);
-
-        transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
-
-
+        //animator.SetFloat("Horizontal", movement.x);
+        //animator.SetFloat("Vertical", movement.y);
+        //animator.SetFloat("Magnitude", movement.magnitude);
 
         // checks if moveright bol is True, if so, the enemy will begin moving right cycle
-        /*if (MoveRight)
+        if (MoveRight)
         {
             transform.Translate(2 * Time.deltaTime * speed, 0, 0);
             // transform.localScale = new Vector2(2, 2);             this code could be used to flip the sprite in appropriate direction, if needed
@@ -44,7 +38,7 @@ public class cowboy_enemy_script : MonoBehaviour
         {
             transform.Translate(-2 * Time.deltaTime * speed, 0, 0);
             // transform.localScale = new Vector2(-2, 2);            see above
-        }*/
+        }
 
 
 

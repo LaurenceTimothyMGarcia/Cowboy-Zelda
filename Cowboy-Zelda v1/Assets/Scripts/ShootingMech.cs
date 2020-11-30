@@ -7,6 +7,11 @@ public class ShootingMech : MonoBehaviour
     public float offset;
     public float bulletCount;
 
+    public int maxAmmo = 3;
+    private int currentAmmo;
+    public float reloadTime = 2f;
+    private bool isReloading = false;
+
     public GameObject bulletPrefab;
     public Transform shotPoint;
 
@@ -15,7 +20,7 @@ public class ShootingMech : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        currentAmmo = maxAmmo;
     }
 
     // Update is called once per frame
@@ -23,11 +28,30 @@ public class ShootingMech : MonoBehaviour
     {
         Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0.0f);//moves character
 
+        //animation of sprites
         animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Vertical", movement.y);
         animator.SetFloat("Magnitude", movement.magnitude);
 
         transform.position = transform.position + movement * Time.deltaTime;
+
+        if (isReloading)
+        {
+            return;
+        }
+
+        if (currentAmmo <= 0)
+        {
+            StartCoroutine(Reload());
+            return;
+        }
+
+        if (Input.GetMouseButtonDown(0)){//button press to shoot
+            Instantiate(bulletPrefab, shotPoint.position, Quaternion.FromToRotation(new Vector3(1, 0, 0), movement));
+            currentAmmo--;
+        }
+
+
 
         //Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;//makes bullet follow mouse
         //float rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
@@ -49,10 +73,17 @@ public class ShootingMech : MonoBehaviour
                 }
         }*/
 
-        if (Input.GetMouseButtonDown(0)){//button press to shoot
-            Instantiate(bulletPrefab, shotPoint.position, Quaternion.FromToRotation(new Vector3(1, 0, 0), movement));
-        }
+    }
 
+    IEnumerator Reload()
+    {
+        isReloading = true;
+        Debug.Log("Reloading...");
+
+        yield return new WaitForSeconds(reloadTime);
+
+        currentAmmo = maxAmmo;
+        isReloading = false;
     }
 
 }
