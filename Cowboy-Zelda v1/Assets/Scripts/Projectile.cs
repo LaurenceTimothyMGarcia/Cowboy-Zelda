@@ -34,7 +34,10 @@ public class Projectile : MonoBehaviour
                 selfy<enemyy+enemyh
                 )
             {
+                FindObjectOfType<AudioManager>().Play("Skeleton Death");
+
                 Object.Destroy(enemy);
+                //DestroyProjectile();
             }
         }
     }

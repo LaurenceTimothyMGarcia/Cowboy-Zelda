@@ -28,8 +28,13 @@ public class cowboy_enemy_script : MonoBehaviour
         //animator.SetFloat("Vertical", movement.y);
         //animator.SetFloat("Magnitude", movement.magnitude);
 
-        // checks if moveright bol is True, if so, the enemy will begin moving right cycle
-        if (MoveRight)
+        foreach (GameObject Bullet in GameObject.FindGameObjectsWithTag("Bullet"))
+        {
+
+        }
+
+            // checks if moveright bol is True, if so, the enemy will begin moving right cycle
+            if (MoveRight)
         {
             transform.Translate(2 * Time.deltaTime * speed, 0, 0);
             // transform.localScale = new Vector2(2, 2);             this code could be used to flip the sprite in appropriate direction, if needed
