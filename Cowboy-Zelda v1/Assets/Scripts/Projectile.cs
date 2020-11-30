@@ -33,6 +33,7 @@ public class Projectile : MonoBehaviour
             if(other != cowboy)
             {
                 Debug.Log(hit.collider.gameObject);
+                Destroy(hit.collider.gameObject);
             }
         }
 
