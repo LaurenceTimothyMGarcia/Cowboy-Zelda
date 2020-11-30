@@ -37,7 +37,7 @@ public class Projectile : MonoBehaviour
                 FindObjectOfType<AudioManager>().Play("Skeleton Death");
 
                 Object.Destroy(enemy);
-                //DestroyProjectile();
+                DestroyProjectile();
             }
         }
     }
