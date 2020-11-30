@@ -57,8 +57,6 @@ public class EnemyAI : MonoBehaviour
             Debug.Log("you dead");
             Destroy(gameObject);
             Destroy(cowboy);
-            FindObjectOfType<AudioManager>().Play("Cowboy Death");
-            FindObjectOfType<GameManager>().EndGame();
         }
 
     }

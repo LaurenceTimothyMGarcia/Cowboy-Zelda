@@ -28,6 +28,7 @@ public class ShootingMech : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         ammoDisplay.text = currentAmmo.ToString();
 
         Vector3 movement = new Vector3(Input.GetAxis("Horizontal")*2, Input.GetAxis("Vertical")*2, 0.0f);//moves character
@@ -79,6 +80,12 @@ public class ShootingMech : MonoBehaviour
                 }
         }*/
 
+    }
+
+    void OnDestroy()
+    {
+        FindObjectOfType<AudioManager>().Play("Cowboy Death");
+        FindObjectOfType<GameManager>().EndGame();
     }
 
     IEnumerator Reload()
