@@ -320,7 +320,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
+  movementTimer: 0
   MoveRight: 0
+  animator: {fileID: 161797139}
 --- !u!61 &161797143
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -601,7 +603,7 @@ GameObject:
   - component: {fileID: 714944506}
   m_Layer: 0
   m_Name: Cowboy2_MAIN_0
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -704,6 +706,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offset: 0
+  bulletCount: 0
   bulletPrefab: {fileID: 6884568752061208422, guid: 4e7558ac9f021214388cf61f7fe9dbc5,
     type: 3}
   shotPoint: {fileID: 1079209669}
