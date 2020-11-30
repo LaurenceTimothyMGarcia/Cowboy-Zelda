@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class ShootingMech : MonoBehaviour
 {
+    private Rigidbody2D rb;
+
     public float offset;
     public float bulletCount;
 
@@ -23,6 +25,7 @@ public class ShootingMech : MonoBehaviour
     void Start()
     {
         currentAmmo = maxAmmo;
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -57,28 +60,6 @@ public class ShootingMech : MonoBehaviour
             projectileScript.cowboy = gameObject;
             currentAmmo--;
         }
-
-
-
-        //Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;//makes bullet follow mouse
-        //float rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
-        //transform.rotation = Quaternion.Euler(0f,0f,rotZ + offset);
-
-
-
-        /*if(Input.GetAxis("Horizontal") != 0){
-            if(Input.GetAxis("Horizontal") > 0){
-                transform.rotation = Quaternion.Euler(0, 0, 0);
-            }   else{
-            transform.rotation = Quaternion.Euler(0, -180, 0);
-            }
-        }   else if(Input.GetAxis("Vertical") != 0){
-                if(Input.GetAxis("Vertical") >= 0){
-                    transform.rotation = Quaternion.Euler(0, 0, 0);
-                }   else{
-                    transform.rotation = Quaternion.Euler(-180, 0, 0);
-                }
-        }*/
 
     }
 

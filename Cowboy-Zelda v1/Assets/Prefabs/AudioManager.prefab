@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5201271693656060731
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5201271693656060728}
+  - component: {fileID: 5201271693656060729}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5201271693656060728
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5201271693656060731}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5201271693656060729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5201271693656060731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3001959073eeb498d02e931a3d83dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Skeleton Death
+    clip: {fileID: 8300000, guid: 92daf9828f4d35747ac3e17ec6106b26, type: 3}
+    volume: 0.753
+    pitch: 1
+    source: {fileID: 0}
+  - name: Cowboy Death
+    clip: {fileID: 8300000, guid: 5fc80108ef5bb5449b18ea377a908274, type: 3}
+    volume: 0.753
+    pitch: 1
+    source: {fileID: 0}
+  - name: Skeleton Shot
+    clip: {fileID: 8300000, guid: 9a61e2bb0a10be148929c6cbd0401b50, type: 3}
+    volume: 0.753
+    pitch: 1
+    source: {fileID: 0}
+  - name: Bird Screech
+    clip: {fileID: 8300000, guid: 15f1377cb1056064a8447f5cf71dffcf, type: 3}
+    volume: 0.753
+    pitch: 1
+    source: {fileID: 0}
