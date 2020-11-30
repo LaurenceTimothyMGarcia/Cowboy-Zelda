@@ -35,6 +35,7 @@ public class BulletScript : MonoBehaviour
             GameObject other = hit.collider.gameObject;
             if (other != enemy)
             {
+                FindObjectOfType<AudioManager>().Play("Cowboy Death");
                 FindObjectOfType<GameManager>().EndGame();
                 Destroy(gameObject);
                 Debug.Log(hit.collider.gameObject);
