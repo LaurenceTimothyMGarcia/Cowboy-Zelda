@@ -9,8 +9,10 @@ public class EnemyAIShooting : MonoBehaviour
     public float shootingRange;
     public float fireRate = 1f;
     private float nextFireTime;
+
     public GameObject bullet;
     public GameObject bulletParent;
+
     private Transform player;
 
     void Start()
@@ -27,7 +29,9 @@ public class EnemyAIShooting : MonoBehaviour
         }
         else if(distanceFromPlayer <= shootingRange && nextFireTime < Time.time)
         {
-            Instantiate(bullet, bulletParent.transform.position, Quaternion.identity);
+            GameObject BulletShot = Instantiate(bullet, bulletParent.transform.position, Quaternion.identity);
+            BulletScript bulletScript = BulletShot.GetComponent<BulletScript>();
+            bulletScript.enemy = gameObject;
             nextFireTime = Time.time + fireRate;
         }
     }
