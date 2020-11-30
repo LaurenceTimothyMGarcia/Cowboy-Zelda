@@ -64,3 +64,8 @@ MonoBehaviour:
     volume: 0.753
     pitch: 1
     source: {fileID: 0}
+  - name: Gun Reload
+    clip: {fileID: 8300000, guid: a932816cc87ee68468389fe870af74e0, type: 3}
+    volume: 0.753
+    pitch: 1
+    source: {fileID: 0}

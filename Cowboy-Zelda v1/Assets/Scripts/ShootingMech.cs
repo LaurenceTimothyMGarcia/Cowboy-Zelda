@@ -51,6 +51,7 @@ public class ShootingMech : MonoBehaviour
         if (currentAmmo <= 0)
         {
             StartCoroutine(Reload());
+            FindObjectOfType<AudioManager>().Play("Gun Reload");
             return;
         }
 
