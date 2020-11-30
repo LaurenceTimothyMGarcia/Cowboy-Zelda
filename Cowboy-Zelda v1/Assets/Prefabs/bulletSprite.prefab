@@ -96,7 +96,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  lifeTime: 1
+  lifeTime: 0.5
+  velocity: {x: 0, y: 0}
+  cowboy: {fileID: 0}
 --- !u!82 &8426593024189260457
 AudioSource:
   m_ObjectHideFlags: 0

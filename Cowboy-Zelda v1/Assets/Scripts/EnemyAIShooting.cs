@@ -14,10 +14,19 @@ public class EnemyAIShooting : MonoBehaviour
     public GameObject bulletParent;
 
     private Transform player;
+    public Transform moveSpot;
+    private float waitTime;
+    public float startWaitTime;
+    public float minX;
+    public float maxX;
+    public float minY;
+    public float maxY;
 
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        waitTime = startWaitTime;
+        moveSpot.position = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
     }
 
     void Update()
@@ -33,6 +42,23 @@ public class EnemyAIShooting : MonoBehaviour
             BulletScript bulletScript = BulletShot.GetComponent<BulletScript>();
             bulletScript.enemy = gameObject;
             nextFireTime = Time.time + fireRate;
+        }
+        else//roaming
+        {
+            transform.position = Vector2.MoveTowards(transform.position, moveSpot.position, speed * Time.deltaTime);
+
+            if (Vector2.Distance(transform.position, moveSpot.position) < 0.2f)
+            {
+                if (waitTime <= 0)
+                {
+                    moveSpot.position = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
+                    waitTime = startWaitTime;
+                }
+                else
+                {
+                    waitTime -= Time.deltaTime;
+                }
+            }
         }
     }
 

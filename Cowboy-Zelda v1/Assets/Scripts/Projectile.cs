@@ -13,7 +13,7 @@ public class Projectile : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //Invoke("DestroyProjectile", lifeTime);
+        Invoke("DestroyProjectile", lifeTime);
     }
 
     // Update is called once per frame
@@ -68,9 +68,9 @@ public class Projectile : MonoBehaviour
         }*/
     }
 
-    //void DestroyProjectile(){
-        //Object.Destroy(gameObject);
-    //}
+    void DestroyProjectile(){
+        Object.Destroy(gameObject);
+    }
     
 
 }

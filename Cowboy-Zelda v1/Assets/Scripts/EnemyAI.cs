@@ -52,7 +52,7 @@ public class EnemyAI : MonoBehaviour
             }
         }
 
-        if(distanceFromPlayer <= 0.1)
+        if(distanceFromPlayer <= 1)
         {
             Debug.Log("you dead");
             Destroy(gameObject);

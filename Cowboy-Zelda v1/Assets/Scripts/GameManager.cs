@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
 
     void Restart()
     {
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene("Game Over");
     }
 
 }

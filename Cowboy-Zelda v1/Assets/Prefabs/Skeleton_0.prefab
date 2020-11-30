@@ -124,6 +124,13 @@ MonoBehaviour:
   fireRate: 1
   bullet: {fileID: 4443320376133625191, guid: 49a860ec2f1bf844eaf8380e3d2475c2, type: 3}
   bulletParent: {fileID: 6742817790599031887}
+  moveSpot: {fileID: 4274000883610585805, guid: 26bfb6ed2322b5346b518896d53f8fc7,
+    type: 3}
+  startWaitTime: 0
+  minX: -11
+  maxX: 11
+  minY: -4
+  maxY: 4
 --- !u!61 &6742817789850262291
 BoxCollider2D:
   m_ObjectHideFlags: 0

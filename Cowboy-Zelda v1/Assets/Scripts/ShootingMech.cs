@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ShootingMech : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class ShootingMech : MonoBehaviour
     private int currentAmmo;
     public float reloadTime = 2f;
     private bool isReloading = false;
+    public Text ammoDisplay;
 
     public GameObject bulletPrefab;
     public Transform shotPoint;
@@ -26,10 +28,7 @@ public class ShootingMech : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(gameObject == null)
-        {
-            FindObjectOfType<GameManager>().EndGame();
-        }
+        ammoDisplay.text = currentAmmo.ToString();
 
         Vector3 movement = new Vector3(Input.GetAxis("Horizontal")*2, Input.GetAxis("Vertical")*2, 0.0f);//moves character
 
