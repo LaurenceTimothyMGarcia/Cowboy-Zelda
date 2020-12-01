@@ -74,6 +74,7 @@ public class ShootingMech : MonoBehaviour
     {
         isReloading = true;
         Debug.Log("Reloading...");
+        ammoDisplay.text = ("Reloading...");
 
         yield return new WaitForSeconds(reloadTime);
 

@@ -133,7 +133,7 @@ MonoBehaviour:
   offset: 0
   bulletCount: 0
   maxAmmo: 3
-  reloadTime: 2
+  reloadTime: 1
   ammoDisplay: {fileID: 0}
   bulletPrefab: {fileID: 6884568752061208422, guid: 4e7558ac9f021214388cf61f7fe9dbc5,
     type: 3}

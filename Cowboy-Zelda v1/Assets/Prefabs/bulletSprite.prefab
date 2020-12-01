@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f64e76f52ae6bf34684decd1fa7c6539, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 12
   lifeTime: 0.55
   velocity: {x: 0, y: 0}
   cowboy: {fileID: 0}
