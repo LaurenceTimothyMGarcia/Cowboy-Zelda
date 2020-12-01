@@ -1143,6 +1143,16 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5139677928638239614, guid: fdb0fa0b4fc1649439c6b8c9758af796,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -156
+      objectReference: {fileID: 0}
+    - target: {fileID: 5139677928638239614, guid: fdb0fa0b4fc1649439c6b8c9758af796,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -393
+      objectReference: {fileID: 0}
     - target: {fileID: 5139677928638239615, guid: fdb0fa0b4fc1649439c6b8c9758af796,
         type: 3}
       propertyPath: m_Color.r
@@ -1157,6 +1167,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Color.b
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5139677928638239615, guid: fdb0fa0b4fc1649439c6b8c9758af796,
+        type: 3}
+      propertyPath: m_Text
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fdb0fa0b4fc1649439c6b8c9758af796, type: 3}

@@ -541,7 +541,7 @@ GameObject:
   - component: {fileID: 545126403}
   m_Layer: 0
   m_Name: Yeehaw
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1474,6 +1474,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5139677928638239614, guid: fdb0fa0b4fc1649439c6b8c9758af796,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -162
+      objectReference: {fileID: 0}
+    - target: {fileID: 5139677928638239614, guid: fdb0fa0b4fc1649439c6b8c9758af796,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -387
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fdb0fa0b4fc1649439c6b8c9758af796, type: 3}
