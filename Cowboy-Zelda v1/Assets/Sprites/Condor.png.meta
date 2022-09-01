@@ -78,7 +78,7 @@ TextureImporter:
       213: -8669927527158873458
     second: Condor_24
   externalObjects: {}
-  serializedVersion: 10
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -98,6 +98,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -107,8 +109,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -129,9 +131,13 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -743,6 +749,32 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Condor_18: 5951892331149045078
+      Condor_1: 2913641746763359335
+      Condor_16: 2897757139119330203
+      Condor_22: 3833700194959783979
+      Condor_9: -5494234656761140894
+      Condor_15: 5036563121606647494
+      Condor_21: -2961012897834446652
+      Condor_24: -8669927527158873458
+      Condor_10: -3886700963809952125
+      Condor_7: 1722664391822372286
+      Condor_20: -4694108621901543417
+      Condor_11: -8863668160729351470
+      Condor_14: 3891160878962376299
+      Condor_4: -132233327692257971
+      Condor_6: -2436179221469281137
+      Condor_12: -8721495453233329875
+      Condor_8: 1032442185236314786
+      Condor_2: -4111772407972880403
+      Condor_23: 1057567994498197319
+      Condor_5: -7278276029715669130
+      Condor_19: 1321043150439164484
+      Condor_3: 6549841868662299446
+      Condor_0: 3201552861418483332
+      Condor_13: -3286540009487785345
+      Condor_17: 3648600917107946929
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

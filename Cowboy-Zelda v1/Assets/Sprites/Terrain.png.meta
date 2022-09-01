@@ -57,7 +57,7 @@ TextureImporter:
       213: -1733739152878373738
     second: Wanted
   externalObjects: {}
-  serializedVersion: 10
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -77,6 +77,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -86,8 +88,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -108,9 +110,13 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -575,6 +581,25 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Sign: -2860982009417361707
+      Sharp: -8314697479797604436
+      Plateu: 9158922217335370285
+      Sign2: 833101472512629755
+      Sign3: -4458388979400810444
+      Sandhill: -6337999885091750218
+      Sharp2: -8560909203809222747
+      Big Plateu: -2913927307954446974
+      Small cave: 1404196382344981941
+      Rock: -1238933728272178944
+      Track2: -38647862416911262
+      Cactus: 8074338581418846440
+      Small Cactus: 4519664136019108208
+      Wanted: -1733739152878373738
+      Track: -3932762474534642510
+      Sand: -5779282676337348671
+      Big Rock: -4637172546458061636
+      Mine: -6537453368205885854
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

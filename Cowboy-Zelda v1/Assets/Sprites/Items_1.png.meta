@@ -96,7 +96,7 @@ TextureImporter:
       213: -4424737673781526173
     second: Items_1_30
   externalObjects: {}
-  serializedVersion: 10
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -116,6 +116,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -125,8 +127,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -147,9 +149,13 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -887,6 +893,38 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Items_1_12: -6671084575838887788
+      Items_1_0: 7455058357585515688
+      Items_1_27: 7812042827317415813
+      Items_1_22: 2013212050860837656
+      Items_1_17: -5130363283294325692
+      Items_1_25: -1563810228789852898
+      Items_1_26: 4533096248220844462
+      Items_1_14: -7349188606907693936
+      Items_1_18: -8892968748215703745
+      Items_1_8: 6153079266434214394
+      Items_1_13: -6731228509793326337
+      Items_1_5: -2894241272156299307
+      Items_1_3: -3069033634951228400
+      Items_1_11: -2651580692282312214
+      Items_1_2: 1777419697579625635
+      Items_1_7: -5598286171239873919
+      Items_1_1: 4292531093066514535
+      Items_1_29: -8525903695565431072
+      Items_1_9: 623606996824345768
+      Items_1_30: -4424737673781526173
+      Items_1_28: -4290365436625077318
+      Items_1_23: -41609205810213078
+      Items_1_24: 7561271210192570649
+      Items_1_16: -614613384640543364
+      Items_1_19: -8747369593603170607
+      Items_1_15: 5975223695553752494
+      Items_1_10: 680999100137453412
+      Items_1_4: -2585042310909185913
+      Items_1_6: -2047619670962445711
+      Items_1_20: 4055234663518992166
+      Items_1_21: 8888877690394475795
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

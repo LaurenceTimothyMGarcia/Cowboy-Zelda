@@ -90,7 +90,7 @@ TextureImporter:
       213: 8158438376834893863
     second: Ammo_total_28
   externalObjects: {}
-  serializedVersion: 10
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -110,6 +110,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -119,8 +121,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -141,9 +143,13 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -839,6 +845,36 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Ammo_total_21: 1070200368552125512
+      Ammo_total_3: -3076214884977158985
+      Ammo_total_17: 9093599477241805402
+      Ammo_total_27: -4004488502563185392
+      Ammo_total_16: -1828244009463484614
+      Ammo_total_19: -3255760854221866115
+      Ammo_total_8: 6791259015252979033
+      Ammo_total_0: 6861381622956494869
+      Ammo_total_22: -4656516502592543121
+      Ammo_total_11: -6736945546341783532
+      Ammo_total_9: -4969473211931594456
+      Ammo_total_4: 4582935365572643923
+      Ammo_total_14: 2909438936317454220
+      Ammo_total_7: 6276686720760650266
+      Ammo_total_20: -8092828547885164646
+      Ammo_total_1: -3073468723103161466
+      Ammo_total_2: 322891067982927684
+      Ammo_total_5: -2287808328127459437
+      Ammo_total_6: -3895522966328630689
+      Ammo_total_12: -7144627911898179150
+      Ammo_total_18: -5860292091846719033
+      Ammo_total_24: -1370522891254934336
+      Ammo_total_26: 5347374044256174874
+      Ammo_total_23: 1338857795789979380
+      Ammo_total_15: -3622759182481622839
+      Ammo_total_28: 8158438376834893863
+      Ammo_total_25: -5930053855731570656
+      Ammo_total_10: -3315004108232694951
+      Ammo_total_13: 1966508046933414525
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
