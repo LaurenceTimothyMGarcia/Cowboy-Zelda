@@ -21,6 +21,11 @@ public class ShootingMech : MonoBehaviour
 
     public Animator animator;
 
+    private Vector3 movement;   // Must declare outside of functions because I implemented this additively
+    private bool isGrounded = true;
+    public float jumpTime = 1f;
+    public float movementAccel = 0.25f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,7 +39,7 @@ public class ShootingMech : MonoBehaviour
 
         ammoDisplay.text = currentAmmo.ToString();
 
-        Vector3 movement = new Vector3(Input.GetAxis("Horizontal")*2, Input.GetAxis("Vertical")*2, 0.0f);//moves character
+        movement += new Vector3(Input.GetAxis("Horizontal") * movementAccel, Input.GetAxis("Vertical") * movementAccel, 0.0f);//moves character
 
         //animation of sprites
         animator.SetFloat("Horizontal", movement.x);
@@ -62,6 +67,9 @@ public class ShootingMech : MonoBehaviour
             currentAmmo--;
         }
 
+        if (isGrounded && Input.GetButtonDown("Jump"))
+            StartCoroutine(Jump());
+
     }
 
     void OnDestroy()
@@ -80,6 +88,19 @@ public class ShootingMech : MonoBehaviour
 
         currentAmmo = maxAmmo;
         isReloading = false;
+    }
+
+    IEnumerator Jump()
+    {
+        // stubberino
+        Debug.Log("JUMP FOR IT");
+        isGrounded = false;
+        // change animation to jump frames
+        // disable collision for cowboy
+        yield return new WaitForSeconds(jumpTime);
+        // change animation to walk frames
+        // enable collision for cowboy
+        isGrounded = true;
     }
 
 }
