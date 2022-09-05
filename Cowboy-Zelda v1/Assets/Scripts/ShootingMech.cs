@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class ShootingMech : MonoBehaviour
 {
     private Rigidbody2D rb;
+    private BoxCollider2D hitbox;
 
     public float offset;
     public float bulletCount;
@@ -21,11 +22,17 @@ public class ShootingMech : MonoBehaviour
 
     public Animator animator;
 
+    private Vector3 movement;   // Must declare outside of functions because I implemented acceleration additively
+    public bool isGrounded = true;
+    public float jumpTime = 1f;
+    public float movementAccel = 0.25f;
+
     // Start is called before the first frame update
     void Start()
     {
         currentAmmo = maxAmmo;
         rb = GetComponent<Rigidbody2D>();
+        hitbox = GetComponent<BoxCollider2D>();
     }
 
     // Update is called once per frame
@@ -34,7 +41,7 @@ public class ShootingMech : MonoBehaviour
 
         ammoDisplay.text = currentAmmo.ToString();
 
-        Vector3 movement = new Vector3(Input.GetAxis("Horizontal")*2, Input.GetAxis("Vertical")*2, 0.0f);//moves character
+        movement += new Vector3(Input.GetAxis("Horizontal") * movementAccel, Input.GetAxis("Vertical") * movementAccel, 0.0f);//moves character
 
         //animation of sprites
         animator.SetFloat("Horizontal", movement.x);
@@ -62,6 +69,9 @@ public class ShootingMech : MonoBehaviour
             currentAmmo--;
         }
 
+        if (isGrounded && Input.GetButtonDown("Jump"))
+            StartCoroutine(Jump());
+
     }
 
     void OnDestroy()
@@ -80,6 +90,18 @@ public class ShootingMech : MonoBehaviour
 
         currentAmmo = maxAmmo;
         isReloading = false;
+    }
+
+    IEnumerator Jump()
+    {
+        Debug.Log("JUMP FOR IT");   // temporary feedback that player is jumping
+        isGrounded = false;
+        animator.SetBool("Jumping", true);// change animation to jump frames
+        hitbox.enabled = false; // Disable collision
+        yield return new WaitForSeconds(jumpTime);  // Jump lasts jumpTime seconds
+        animator.SetBool("Jumping", false);// change animation to walk frames
+        hitbox.enabled = true;  // Re-enable collision
+        isGrounded = true;
     }
 
 }

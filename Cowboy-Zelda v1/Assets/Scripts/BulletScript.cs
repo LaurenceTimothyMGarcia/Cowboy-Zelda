@@ -36,8 +36,9 @@ public class BulletScript : MonoBehaviour
             if (other != enemy)
             {
                 Destroy(gameObject);
-                Debug.Log(hit.collider.gameObject);
-                Destroy(hit.collider.gameObject);
+                if (other != null)
+                    Debug.Log(this + " Hit " + other);
+                Destroy(other);
             }
         }
     }

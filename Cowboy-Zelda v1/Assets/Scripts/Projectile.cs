@@ -34,8 +34,9 @@ public class Projectile : MonoBehaviour
             {
                 FindObjectOfType<AudioManager>().Play("Skeleton Death");
                 Destroy(gameObject);
-                Debug.Log(hit.collider.gameObject);
-                Destroy(hit.collider.gameObject);
+                if (other != null)  // Prevents spamming the log with null reference exceptions
+                    Debug.Log(this + " Hit " + other);  // Message saying what this bullet hit
+                Destroy(other);
             }
         }
 
