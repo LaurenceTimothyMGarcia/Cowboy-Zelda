@@ -2368,12 +2368,22 @@ PrefabInstance:
     - target: {fileID: 5684493952472008849, guid: 99c99f67398e28643bab0f9501a4e085,
         type: 3}
       propertyPath: movementAccel
-      value: 0
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 5684493952472008853, guid: 99c99f67398e28643bab0f9501a4e085,
         type: 3}
       propertyPath: m_Name
       value: Cowboy2_MAIN_0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5684493952472008855, guid: 99c99f67398e28643bab0f9501a4e085,
+        type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5684493952472008855, guid: 99c99f67398e28643bab0f9501a4e085,
+        type: 3}
+      propertyPath: m_FlipY
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99c99f67398e28643bab0f9501a4e085, type: 3}

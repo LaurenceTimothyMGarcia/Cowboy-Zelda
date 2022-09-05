@@ -18,6 +18,8 @@ public class EnemyAI : MonoBehaviour
 
     public GameObject cowboy;
 
+    private bool isCowboyJumping;
+
 
     void Start()
     {
@@ -52,7 +54,7 @@ public class EnemyAI : MonoBehaviour
             }
         }
 
-        if(distanceFromPlayer <= 1)
+        if(distanceFromPlayer <= 1 && cowboy.GetComponent<ShootingMech>().isGrounded)   // don't kill if jumping
         {
             Debug.Log("you dead");
             Destroy(gameObject);

@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class ShootingMech : MonoBehaviour
 {
     private Rigidbody2D rb;
+    private BoxCollider2D hitbox;
 
     public float offset;
     public float bulletCount;
@@ -21,8 +22,8 @@ public class ShootingMech : MonoBehaviour
 
     public Animator animator;
 
-    private Vector3 movement;   // Must declare outside of functions because I implemented this additively
-    private bool isGrounded = true;
+    private Vector3 movement;   // Must declare outside of functions because I implemented acceleration additively
+    public bool isGrounded = true;
     public float jumpTime = 1f;
     public float movementAccel = 0.25f;
 
@@ -31,6 +32,7 @@ public class ShootingMech : MonoBehaviour
     {
         currentAmmo = maxAmmo;
         rb = GetComponent<Rigidbody2D>();
+        hitbox = GetComponent<BoxCollider2D>();
     }
 
     // Update is called once per frame
@@ -92,14 +94,13 @@ public class ShootingMech : MonoBehaviour
 
     IEnumerator Jump()
     {
-        // stubberino
-        Debug.Log("JUMP FOR IT");
+        Debug.Log("JUMP FOR IT");   // temporary feedback that player is jumping
         isGrounded = false;
-        // change animation to jump frames
-        // disable collision for cowboy
-        yield return new WaitForSeconds(jumpTime);
-        // change animation to walk frames
-        // enable collision for cowboy
+        animator.SetBool("Jumping", true);// change animation to jump frames
+        hitbox.enabled = false; // Disable collision
+        yield return new WaitForSeconds(jumpTime);  // Jump lasts jumpTime seconds
+        animator.SetBool("Jumping", false);// change animation to walk frames
+        hitbox.enabled = true;  // Re-enable collision
         isGrounded = true;
     }
 
